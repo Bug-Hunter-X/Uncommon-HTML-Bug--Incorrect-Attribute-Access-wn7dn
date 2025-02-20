@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Correct way to access element attributes
+    let myAttribute = document.getElementById("myDiv").getAttribute("id");
+    if (myAttribute) {
+      console.log(myAttribute); //This will print the id
+    } else {
+      console.log("Attribute not found"); //Handle the case when the attribute is not found
+    }
+  </script>
+</body>
+</html>
