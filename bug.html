@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Incorrect way to access element attribute that causes an error
+    let myAttribute = document.getElementById("myDiv").getAttributeNode("id").nodeValue;
+    console.log(myAttribute); //This will cause an error if attribute is not found.
+    
+    //Correct approach that handle the case when the attribute is not found
+    let correctMyAttribute = document.getElementById("myDiv").getAttribute("id");
+    console.log(correctMyAttribute); //This will print the id even if attribute is not found.
+  </script>
+</body>
+</html>
